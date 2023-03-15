@@ -15,7 +15,7 @@ import Pie from "./scenes/pie";
 import FAQ from "./scenes/faq";
 import Geography from "./scenes/geography";
 import Calendar from "./scenes/calendar/calendar";
-
+// jdbc:mysql://localhost:3306/ems
 function App() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
@@ -28,7 +28,7 @@ function App() {
                 <main className="content">
                  <Topbar setIsSidebar={setIsSidebar}  />
                    <Routes>
-                       <Route path="/dashboard" element={<Dashboard />} />
+                       <Route path="/" element={<Dashboard />} />
                        <Route path="/team" element={<Team />} />
                        <Route path="/contacts" element={<Contacts />} />
                        <Route path="/invoices" element={<Invoices />} />

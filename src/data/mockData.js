@@ -1,4 +1,14 @@
 import { tokens } from "../theme";
+import axios from 'axios';
+
+axios.get('/data')
+    .then(response => {
+        console.log(response.data);
+        // Do something with the data
+    })
+    .catch(error => {
+        console.error(error);
+    });
 
 export const mockDataTeam = [
     {
